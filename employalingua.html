@@ -65,6 +65,7 @@
     "logo": "https://employalingua.com/logo.png",
     "description": "Gamified AI platform bridging ESOL and employment. A registered trademark of Pathfinder Educational Ltd (UK00004293596).",
     "parentOrganization": { "@type": "Organization", "name": "Pathfinder Educational Ltd", "url": "https://pthfndr.org" },
+    "address": { "@type": "PostalAddress", "streetAddress": "GM Digital Security Hub (DiSH), 47 Lloyd Street", "addressLocality": "Manchester", "postalCode": "M2 5LE", "addressCountry": "GB" },
     "contactPoint": { "@type": "ContactPoint", "contactType": "Commissioner enquiries", "url": "https://employalingua.com/#register" },
     "areaServed": [{ "@type": "Country", "name": "United Kingdom" }, { "@type": "Country", "name": "Canada" }]
   }
@@ -681,7 +682,7 @@
             <p class="pc-desc">ESOL and education delivery partner. MEaP brought direct programme expertise and learner access to the EmployaLingua® prototype testing process.</p>
           </div>
           <div class="pc reveal d1">
-            <div class="pc-top"><span class="pc-badge">BRASS</span><div><p class="pc-name">Befriending Refugees and Asylum Seekers</p><p class="pc-loc">Bolton</p></div></div>
+            <div class="pc-top"><span class="pc-badge">BRASS</span><div><p class="pc-name">Befriending Refugees and Asylum Seekers</p><p class="pc-loc">Manchester</p></div></div>
             <p class="pc-desc">Community support partner. BRASS provided the community connection that shaped the platform's usability, language, and dignity-first design.</p>
           </div>
           <div class="pc reveal d2">
@@ -1111,7 +1112,7 @@
             <div class="f-err" id="i-err"></div>
             <div class="submit-row">
               <button type="submit" class="f-submit" id="i-btn">Register Interest <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              <p class="f-legal">EmployaLingua® is a registered trademark of Pathfinder Educational Ltd (UK00004293596). Your details will be used solely to progress a commissioning conversation.</p>
+              <p class="f-legal">EmployaLingua® is a registered trademark of Pathfinder Educational Ltd (UK00004293596). Your details will be used solely to progress a commissioning conversation.<br>GM Digital Security Hub (DiSH), 47 Lloyd Street, Manchester, M2 5LE</p>
             </div>
           </div>
 
@@ -1161,7 +1162,8 @@
     <div class="foot-i">
       <a href="#" class="wm foot-wm">Employa<em>L</em>ingua<sup>®</sup></a>
       <div class="foot-meta">
-        <a href="/learn">For learners →</a> &nbsp;·&nbsp; <a href="https://employalingua.com">employalingua.com</a> &nbsp;·&nbsp; &copy; 2025 Pathfinder Educational Ltd
+        <a href="/learn">For learners →</a> &nbsp;·&nbsp; <a href="https://employalingua.com">employalingua.com</a> &nbsp;·&nbsp; &copy; 2025 Pathfinder Educational Ltd<br>
+        GM Digital Security Hub (DiSH), 47 Lloyd Street, Manchester, M2 5LE
       </div>
     </div>
   </div>
@@ -1175,8 +1177,8 @@
    * Supabase Dashboard → Project Settings → API
    * Replace both values below with your real credentials.
    */
-  const SB_URL = 'https://etwgddsxrapshjlylimx.supabase.co';
-  const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV0d2dkZHN4cmFwc2hqbHlsaW14Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ4NzI5NjMsImV4cCI6MjA5MDQ0ODk2M30.UyWCy80uiDafvgIWHg5N8z9phXnLBDBKZ-JEcepiNkA';
+  const SB_URL = 'YOUR_SUPABASE_URL';
+  const SB_KEY = 'YOUR_SUPABASE_ANON_KEY';
 
   /* ── nav shadow on scroll ── */
   const navEl = document.getElementById('nav');
