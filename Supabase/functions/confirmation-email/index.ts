@@ -9,7 +9,7 @@ import { serve } from 'https://deno.land/std@0.168.0/http/server.ts';
 
 // ─── CONFIG ──────────────────────────────────────────────────────────────────
 // Update FROM_EMAIL once employalingua.com is verified in Resend
-const FROM_EMAIL  = 'support@employalingua.com';      // → 'support@employalingua.com' after DNS
+const FROM_EMAIL  = 'onboarding@resend.dev';      // → 'support@employalingua.com' after DNS
 const FROM_NAME   = 'EmployaLingua®';
 const REPLY_TO    = 'support@employalingua.com';
 const RESEND_URL  = 'https://api.resend.com/emails';
@@ -42,7 +42,7 @@ function baseLayout(content: string): string {
         <tr>
           <td style="background:${NAVY};padding:32px 40px;">
             <p style="margin:0;font-family:Georgia,serif;font-size:22px;font-weight:400;color:${WHITE};letter-spacing:-0.01em;">Employa<span style="font-style:italic;">L</span>ingua&#174;</p>
-            <p style="margin:6px 0 0;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.45);">Vocational Fluency Platform</p>
+            <p style="margin:6px 0 0;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.45);">Gamified AI Platform</p>
           </td>
         </tr>
 
@@ -57,7 +57,7 @@ function baseLayout(content: string): string {
         <tr>
           <td style="background:${LIGHT};border-top:1px solid #E5E7EB;padding:24px 40px;">
             <p style="margin:0;font-size:12px;color:${MUTED};line-height:1.6;">
-              EmployaLingua® is a registered trademark of Pathfinder Educational Limited (UK00004293596).
+              EmployaLingua® is a registered trademark of Pathfinder Educational Ltd (Co. No. 15659558).
               This email was sent because you submitted a form at
               <a href="https://employalingua.com" style="color:${TEAL};text-decoration:none;">employalingua.com</a>.
             </p>
@@ -143,8 +143,22 @@ function interestEmail(record: Record<string, unknown>): { subject: string; html
       </tr>`).join('')}
     </table>
 
-    <p style="margin:28px 0 0;font-size:14px;color:${MUTED};line-height:1.65;">
-      In the meantime, you can review the platform overview at
+    <!-- Book now CTA -->
+    <table width="100%" cellpadding="0" cellspacing="0" role="presentation"
+      style="margin:28px 0;background:#F0F9F8;border:1px solid #C8E6E3;border-radius:10px;">
+      <tr><td style="padding:24px 28px;">
+        <p style="margin:0 0 6px;font-size:13px;font-weight:700;color:${NAVY};">Want to book a time right now?</p>
+        <p style="margin:0 0 18px;font-size:13px;color:#374151;line-height:1.6;">Skip the back-and-forth. Choose a time that works for you and we'll send a calendar invite directly to your inbox.</p>
+        <a href="https://outlook.office365.com/owa/calendar/PartnershipConsultation@pthfndr.org/bookings/"
+           style="display:inline-block;background:${TEAL};color:${WHITE};font-family:'DM Sans',Arial,sans-serif;font-size:14px;font-weight:600;text-decoration:none;padding:11px 24px;border-radius:7px;">
+          Book a time in Outlook &rarr;
+        </a>
+        <p style="margin:12px 0 0;font-size:11px;color:#9CA3AF;">Opens Microsoft Bookings. No account required.</p>
+      </td></tr>
+    </table>
+
+    <p style="margin:0;font-size:14px;color:${MUTED};line-height:1.65;">
+      You can also review the platform at
       <a href="https://employalingua.com" style="color:${TEAL};text-decoration:none;">employalingua.com</a>
       or forward this email to a colleague who may be interested.
     </p>`;
@@ -223,7 +237,21 @@ function demoEmail(record: Record<string, unknown>): { subject: string; html: st
 
     <p style="margin:28px 0 0;font-size:14px;color:${MUTED};line-height:1.65;">
       If you need to reach us before then, reply directly to this email.
-    </p>`;
+    </p>
+
+    <!-- Book now CTA -->
+    <table width="100%" cellpadding="0" cellspacing="0" role="presentation"
+      style="margin:24px 0 0;background:#F0F9F8;border:1px solid #C8E6E3;border-radius:10px;">
+      <tr><td style="padding:24px 28px;">
+        <p style="margin:0 0 6px;font-size:13px;font-weight:700;color:${NAVY};">Prefer to book the demo now?</p>
+        <p style="margin:0 0 18px;font-size:13px;color:#374151;line-height:1.6;">Choose a slot and we'll send a confirmed calendar invite straight to your inbox — no back-and-forth needed.</p>
+        <a href="https://outlook.office365.com/owa/calendar/EmployaLinguaDemo@pthfndr.org/bookings/"
+           style="display:inline-block;background:${TEAL};color:${WHITE};font-family:'DM Sans',Arial,sans-serif;font-size:14px;font-weight:600;text-decoration:none;padding:11px 24px;border-radius:7px;">
+          Book your demo in Outlook &rarr;
+        </a>
+        <p style="margin:12px 0 0;font-size:11px;color:#9CA3AF;">Opens Microsoft Bookings. No account required.</p>
+      </td></tr>
+    </table>`;
 
   return {
     subject: `EmployaLingua® — Your demo request`,
