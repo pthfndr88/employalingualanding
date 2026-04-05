@@ -537,25 +537,43 @@
     @media (max-width: 480px) {
       .sector-grid { grid-template-columns: 1fr; }
     }
+
+    /* ── COMPACT PROOF STRIP ── */
+    @media(max-width:720px){
+      [style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr!important;}
+    }
+    /* ── TRAPEZIUM RESPONSIVE ── */
+    @media(max-width:900px){
+      #trapezium .wrap>div:first-child{grid-template-columns:1fr!important;}
+      #trapezium svg{position:static!important;max-width:380px;margin:0 auto;}
+    }
+    /* ── VALIDATION + SECTORS LAYOUT ── */
+    @media(max-width:860px){
+      .val-grid{grid-template-columns:1fr!important;}
+    }
+    /* ── PRICING RESPONSIVE ── */
+    @media(max-width:860px){
+      .pricing>div>div:first-child{grid-template-columns:1fr!important;}
+    }
   </style>
 </head>
 <body>
 
+
 <!-- NAV -->
-<nav id="nav">
+<nav>
   <div class="nav-i">
-    <a href="#" class="wm nav-wm">Employa<em>L</em>ingua<sup>®</sup></a>
+    <a href="/" class="wm nav-wm">Employa<em>L</em>ingua<sup>®</sup></a>
     <div class="nav-links">
       <a href="#trapezium" class="nav-a">The Model</a>
-      <a href="#partner-portal" class="nav-a">Platform</a>
       <a href="#pricing" class="nav-a">Pricing</a>
       <a href="#validation" class="nav-a">Partners</a>
       <a href="/research/" class="nav-a">Research</a>
       <a href="/learn" class="nav-a" style="color:rgba(255,255,255,0.28);font-size:0.78rem;">For learners →</a>
     </div>
-    <div class="nav-btns">
-      <a href="#register" class="nav-ghost" id="nav-demo">Request a Demo</a>
-      <a href="#register" class="nav-solid">Book a Consultation</a>
+    <div class="nav-ctas">
+      <a href="#register" class="nav-ghost">Book a Consultation</a>
+      <a href="#register" class="nav-solid" id="hero-demo">Request a Demo</a>
     </div>
   </div>
 </nav>
@@ -566,32 +584,27 @@
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <p class="hero-kicker">For Local Authorities · Training Providers · Schools</p>
+        <p class="hero-kicker">For Local Authorities · Training Providers · NHS · FE Colleges</p>
         <h1>
           Turn ESOL Learners<br>
           Into Employed Workers.<br>
           <span class="acc">At Scale.</span>
         </h1>
         <p class="hero-sub">
-          EmployaLingua® deploys AI-powered, dual-language employability training across your entire cohort. One platform. Measurable outcomes. Full audit trail.
+          EmployaLingua® is an AI-powered vocational fluency platform. Sector-specific English and native-language instruction simultaneously — for every learner in your cohort, from day one.
         </p>
         <div class="hero-acts">
           <a href="#register" class="btn btn-t">
             Book a Partnership Consultation
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a href="#register" class="btn btn-o" id="hero-demo">Request a Live Demo</a>
-        </div>
-        <div class="hero-stores">
-          <a href="#" class="badge-store"><svg width="18" height="22" viewBox="0 0 20 24" fill="none"><path d="M16.462 12.52c-.028-3.22 2.633-4.783 2.752-4.857-1.503-2.194-3.836-2.494-4.662-2.522-1.983-.2-3.874 1.174-4.878 1.174-1.004 0-2.546-1.146-4.188-1.115-2.148.033-4.136 1.25-5.241 3.16-2.24 3.876-.573 9.612 1.607 12.757 1.063 1.54 2.325 3.267 3.985 3.204 1.6-.064 2.205-1.032 4.14-1.032 1.936 0 2.487 1.032 4.188.998 1.72-.03 2.812-1.565 3.868-3.11 1.222-1.776 1.72-3.505 1.748-3.592-.038-.017-3.35-1.29-3.319-5.065zM13.337 3.46C14.198 2.42 14.785.998 14.62-.006c-1.126.047-2.493.748-3.3 1.77-.718.882-1.358 2.315-1.187 3.677 1.257.098 2.548-.636 3.204-1.981z" fill="white"/></svg><div class="bs-text"><span class="bs-sub">Download on the</span><span class="bs-name">App Store</span></div></a>
-          <a href="#" class="badge-store"><svg width="18" height="20" viewBox="0 0 20 22" fill="none"><path d="M.429.554C.163.836 0 1.27 0 1.838v18.324c0 .568.163 1.002.437 1.276l.067.065 10.264-10.264v-.241L.496.489.43.554z" fill="white" fill-opacity=".8"/><path d="M14.205 14.682l-3.437-3.44v-.254l3.44-3.44.078.044 4.073 2.313c1.163.66 1.163 1.742 0 2.406l-4.073 2.313-.081.058z" fill="white"/><path d="M14.286 14.624L10.768 11.1.429 21.438c.382.407 1.018.457 1.734.051l12.123-6.865" fill="white" fill-opacity=".6"/><path d="M14.286 7.576L2.163.712C1.447.298.811.356.429.763l10.339 10.34 3.518-3.527z" fill="white" fill-opacity=".6"/></svg><div class="bs-text"><span class="bs-sub">Get it on</span><span class="bs-name">Google Play</span></div></a>
-          <span class="hero-stores-note">Coming soon · iOS &amp; Android</span>
+          <a href="#register" class="btn btn-o">Request a Live Demo</a>
         </div>
         <div class="hero-rule">
           <div><p class="hr-label">Cohort size</p><p class="hr-val">20–500 learners</p></div>
-          <div><p class="hr-label">Framework</p><p class="hr-val">CEFR-tracked · A1 → B2</p></div>
+          <div><p class="hr-label">Framework</p><p class="hr-val">CEFR-tracked · A1 → C1</p></div>
           <div><p class="hr-label">Sectors</p><p class="hr-val">Healthcare · Construction · Digital · Teaching</p></div>
-          <div><p class="hr-label">Markets</p><p class="hr-val">England · Canada</p></div>
+          <div><p class="hr-label">Languages</p><p class="hr-val">English · Arabic · Urdu · Farsi · Tigrinya</p></div>
         </div>
       </div>
 
@@ -603,15 +616,15 @@
         </div>
         <div class="hc-row">
           <div class="hc-dot"></div>
-          <p class="hc-t"><strong>The Force Multiplier</strong> — one staff member manages 500 learners. The AI delivers personalised instruction to every learner simultaneously.</p>
+          <p class="hc-t"><strong>The Force Multiplier</strong> — one staff member manages 50+ learners. The AI delivers personalised instruction to every learner simultaneously.</p>
         </div>
         <div class="hc-row">
           <div class="hc-dot"></div>
-          <p class="hc-t"><strong>The Native-Language Bridge</strong> <span class="hc-tag">Unique</span> — learners gain employability skills before they are fluent in English. No bilingual tutors required.</p>
+          <p class="hc-t"><strong>The Native-Language Bridge</strong> <span class="hc-tag">Unique</span> — learners gain sector competence before they are fluent in English. No bilingual tutors required.</p>
         </div>
         <div class="hc-row">
           <div class="hc-dot"></div>
-          <p class="hc-t"><strong>The Audit Trail</strong> — every activity, every level, every assessment gate. Exportable for DWP, Ofsted, and Skills England reporting.</p>
+          <p class="hc-t"><strong>The Audit Trail</strong> — every activity, every level, every assessment gate. Exportable for DWP, Ofsted, and Skills England.</p>
         </div>
         <div class="hc-row">
           <div class="hc-dot"></div>
@@ -627,235 +640,97 @@
 </section>
 
 
-<!-- PHOTO MOMENT -->
-<!-- Replace the src URL with your own image. Free options: https://unsplash.com/s/photos/diverse-professionals -->
-<div class="photo-moment">
-  <img
-    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&auto=format&fit=crop&q=60"
-    alt="Diverse professionals in a workplace training environment"
-    loading="lazy">
-  <div class="photo-moment-overlay">
-    <div class="photo-caption">
-      <p>A Syrian doctor working as a care assistant.<br>A Colombian engineer labouring on-site.<br>An Ethiopian accountant in a hotel kitchen.</p>
-      <p><strong>The language of the sector is the only thing between them and the work they can actually do.</strong></p>
+<!-- PROOF STRIP — replaces 3 benefit sections -->
+<div style="background:var(--navy-deep);border-top:1px solid rgba(255,255,255,0.07);border-bottom:1px solid rgba(255,255,255,0.07);padding:clamp(1.75rem,3.5vw,2.5rem) 0;">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.08);border-radius:var(--r-lg);overflow:hidden;">
+
+      <div style="background:var(--navy-deep);padding:1.75rem 2rem;">
+        <p style="font-size:2.25rem;font-weight:700;color:var(--teal-mid);letter-spacing:-0.03em;line-height:1;margin-bottom:0.625rem;">50+</p>
+        <p style="font-size:0.875rem;font-weight:600;color:#fff;margin-bottom:0.375rem;">One staff member. Entire cohort.</p>
+        <p style="font-size:0.8125rem;color:rgba(255,255,255,0.45);line-height:1.55;">The AI delivers personalised instruction simultaneously. No additional headcount required.</p>
+      </div>
+
+      <div style="background:var(--navy-deep);padding:1.75rem 2rem;">
+        <p style="font-size:2.25rem;font-weight:700;color:var(--teal-mid);letter-spacing:-0.03em;line-height:1;margin-bottom:0.625rem;">Day 1</p>
+        <p style="font-size:0.875rem;font-weight:600;color:#fff;margin-bottom:0.375rem;">Sector skills before full fluency.</p>
+        <p style="font-size:0.8125rem;color:rgba(255,255,255,0.45);line-height:1.55;">English and native language simultaneously. No bilingual tutors. No waiting for general fluency first.</p>
+      </div>
+
+      <div style="background:var(--navy-deep);padding:1.75rem 2rem;">
+        <p style="font-size:2.25rem;font-weight:700;color:var(--teal-mid);letter-spacing:-0.03em;line-height:1;margin-bottom:0.625rem;">100%</p>
+        <p style="font-size:0.875rem;font-weight:600;color:#fff;margin-bottom:0.375rem;">Every learner. Fully evidenced.</p>
+        <p style="font-size:0.8125rem;color:rgba(255,255,255,0.45);line-height:1.55;">CEFR-tracked. DWP distance-travelled. Social Value Act. Exportable on demand.</p>
+      </div>
+
     </div>
   </div>
 </div>
-
-
-<!-- TRUST STRIP -->
-<div class="trust-strip">
-  <div class="wrap">
-    <div class="trust-inner">
-      <span class="trust-lbl">Built on</span>
-      <div class="trust-items">
-        <span class="trust-badge ms">
-          <svg width="16" height="16" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="10" height="10" fill="#F25022"/><rect x="12" y="1" width="10" height="10" fill="#7FBA00"/><rect x="1" y="12" width="10" height="10" fill="#00A4EF"/><rect x="12" y="12" width="10" height="10" fill="#FFB900"/></svg>
-          Microsoft for Startups
-        </span>
-        <span class="trust-badge ms">
-          <svg width="14" height="14" viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9 0C4.03 0 0 4.03 0 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16.2c-3.97 0-7.2-3.23-7.2-7.2S5.03 1.8 9 1.8 16.2 5.03 16.2 9 12.97 16.2 9 16.2z"/><path d="M9 4.5a4.5 4.5 0 100 9 4.5 4.5 0 000-9z"/></svg>
-          Azure OpenAI — UK data residency
-        </span>
-        <span class="trust-badge">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-          GDPR compliant
-        </span>
-        <span class="trust-badge">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          WEA funded
-        </span>
-        <span class="trust-badge ms" style="border-color:rgba(0,100,180,0.4);color:#0064B4;background:rgba(0,100,180,0.04);">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-          Cyber Essentials certified
-        </span>
-        <span class="trust-badge">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
-          Greater Manchester Combined Authority
-        </span>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- BENEFIT 1: FORCE MULTIPLIER / SCALE -->
-<section class="benefit dark" id="scale">
-  <div class="wrap">
-    <div class="benefit-grid">
-      <div class="benefit-copy">
-        <p class="ey dim">Scale</p>
-        <h2 class="inv">One staff member.<br><strong>Five hundred learners.</strong></h2>
-        <p class="lead inv">EmployaLingua® replaces the need for bilingual tutors at scale. The AI delivers personalised, sector-specific instruction to every learner simultaneously. Your team monitors progress. The platform does the teaching.</p>
-        <div class="b-bullets" style="margin-top:1.5rem;">
-          <p class="bb inv">Deploy across multiple cohorts without increasing headcount</p>
-          <p class="bb inv">Onboard new learners in minutes via the admin portal</p>
-          <p class="bb inv">Extend provision to hard-to-reach groups at zero additional cost</p>
-          <p class="bb inv">Add new sector pathways — zero code changes required</p>
-        </div>
-      </div>
-      <div class="reveal">
-        <div class="stat-cards" style="margin-top:0;">
-          <div class="stat-card">
-            <p class="stat-num">500+</p>
-            <p class="stat-label">Learners managed by one staff member via the platform</p>
-          </div>
-          <div class="stat-card">
-            <p class="stat-num">4</p>
-            <p class="stat-label">Sector pathways deployable from a single admin dashboard</p>
-          </div>
-          <div class="stat-card">
-            <p class="stat-num">5</p>
-            <p class="stat-label">Languages served simultaneously — English, Arabic, Urdu, Farsi, Tigrinya</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- BENEFIT 2: NATIVE-LANGUAGE BRIDGE -->
-<section class="benefit light" id="bridge">
-  <div class="wrap">
-    <div class="benefit-grid flip">
-      <div class="benefit-copy">
-        <p class="ey">Native-language bridge</p>
-        <h2>Learners gain employability skills<br><strong>before they are fluent in English.</strong></h2>
-        <p class="lead">No bilingual tutors. No waiting for fluency. Learners build sector competence and English simultaneously — from day one.</p>
-        <div class="b-bullets" style="margin-top:1.5rem;">
-          <p class="bb">Simultaneous English and home language instruction — not translation on demand</p>
-          <p class="bb">Eliminates dependency on scarce and expensive bilingual staff</p>
-          <p class="bb">Accelerates time-to-employment across your entire cohort</p>
-          <p class="bb">Serves Arabic, Urdu, Farsi, and Tigrinya — the actual language profile of UK ESOL cohorts</p>
-        </div>
-      </div>
-      <div class="benefit-visual reveal">
-        <div style="background:var(--navy);border-radius:var(--r-lg);padding:2rem;">
-          <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal-mid);margin-bottom:1.25rem;">How the bilingual bridge works</p>
-          <div style="display:flex;flex-direction:column;gap:1rem;">
-            <div style="background:rgba(255,255,255,0.06);border-radius:var(--r);padding:1rem 1.125rem;border-left:3px solid var(--teal);">
-              <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--teal-mid);margin-bottom:0.5rem;">AI tutor prompt — English</p>
-              <p style="font-size:0.9375rem;color:rgba(255,255,255,0.8);line-height:1.6;">"Bay 4 is post-op, obs stable, asking for PRN. What do you do first?"</p>
-            </div>
-            <div style="background:rgba(255,255,255,0.06);border-radius:var(--r);padding:1rem 1.125rem;border-left:3px solid rgba(0,137,123,0.5);">
-              <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(128,203,196,0.7);margin-bottom:0.5rem;">Reinforcement — Arabic (native language)</p>
-              <p style="font-size:0.9375rem;color:rgba(255,255,255,0.6);line-height:1.6;direction:rtl;text-align:right;">الجناح 4 بعد العملية، المؤشرات مستقرة، تطلب دواءً عند الحاجة. ماذا تفعل أولاً؟</p>
-            </div>
-            <div style="background:rgba(0,137,123,0.12);border:1px solid rgba(0,137,123,0.3);border-radius:var(--r);padding:1rem 1.125rem;">
-              <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--teal-mid);margin-bottom:0.5rem;">Result</p>
-              <p style="font-size:0.9rem;color:rgba(255,255,255,0.7);line-height:1.6;">The learner comprehends the clinical scenario in their first language and responds in English. Confidence builds. Retention improves. No bilingual tutor needed.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <!-- TRAPEZIUM MODEL -->
 <section class="trapezium-sec" id="trapezium">
   <div class="wrap">
-    <div style="display:grid;grid-template-columns:1fr 420px;gap:clamp(2rem,4vw,4rem);align-items:start;margin-bottom:2rem;">
+    <div style="display:grid;grid-template-columns:1fr 380px;gap:clamp(2rem,4vw,4rem);align-items:start;margin-bottom:2rem;">
 
       <div>
         <p class="ey">The Trapezium Model</p>
         <p class="trap-quote">Most platforms teach skills.<br><strong>EmployaLingua® starts with identity.</strong></p>
-        <p class="lead" style="margin-bottom:1.375rem;">Skills built on sand don't hold. A learner who doesn't understand who they are — their background, capability, and professional story — cannot build meaningful competence on top of it.</p>
-        <p style="font-size:0.9375rem;color:var(--t2);line-height:1.75;margin-bottom:1.5rem;">EmployaLingua®'s Trapezium Model structures every learner's journey through three axes — <strong>Know. Be. Do.</strong> — and four ascending pillars: Identity, Character, Competence, and Impact. The sequence is deliberate and irreversible. You cannot skip Identity and arrive at Impact.</p>
+        <p class="lead" style="margin-bottom:1.375rem;">Skills built on sand don't hold. Every learner begins with a personalised identity statement — before a single vocabulary word is taught. Their career is not starting. It is continuing.</p>
 
         <div style="display:flex;flex-direction:column;gap:0.75rem;">
           <div style="display:flex;align-items:flex-start;gap:12px;padding:0.875rem 1rem;background:var(--off);border-radius:var(--r);border-left:3px solid #6B4E9E;">
-            <div style="flex-shrink:0;margin-top:2px;">
-              <span style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6B4E9E;">KNOW · Identity</span>
-            </div>
-            <p style="font-size:0.875rem;color:var(--t2);line-height:1.6;">Who are you? Every learner receives a personalised identity statement before their path begins — written in English and their native language.</p>
+            <span style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6B4E9E;flex-shrink:0;margin-top:2px;">KNOW · Identity</span>
+            <p style="font-size:0.875rem;color:var(--t2);line-height:1.6;">Every learner receives a personalised identity statement in English and their native language before learning begins.</p>
           </div>
           <div style="display:flex;align-items:flex-start;gap:12px;padding:0.875rem 1rem;background:var(--off);border-radius:var(--r);border-left:3px solid #2B7DC1;">
-            <div style="flex-shrink:0;margin-top:2px;">
-              <span style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#2B7DC1;">BE · Character</span>
-            </div>
-            <p style="font-size:0.875rem;color:var(--t2);line-height:1.6;">Values, working style, professional behaviours. Character determines how competence is applied in a real workplace — and how a learner shows up on day one.</p>
+            <span style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#2B7DC1;flex-shrink:0;margin-top:2px;">BE · Character</span>
+            <p style="font-size:0.875rem;color:var(--t2);line-height:1.6;">Values, working style, professional behaviours — the bridge between identity and competence.</p>
           </div>
           <div style="display:flex;align-items:flex-start;gap:12px;padding:0.875rem 1rem;background:var(--off);border-radius:var(--r);border-left:3px solid var(--teal);">
-            <div style="flex-shrink:0;margin-top:2px;">
-              <span style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal-dark);">DO · Competence</span>
-            </div>
-            <p style="font-size:0.875rem;color:var(--t2);line-height:1.6;">The sector-specific language, vocabulary, and professional register of the role — built on a stable foundation of identity and character.</p>
+            <span style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal-dark);flex-shrink:0;margin-top:2px;">DO · Competence</span>
+            <p style="font-size:0.875rem;color:var(--t2);line-height:1.6;">Sector-specific language, vocabulary, and professional register — built on a stable foundation.</p>
           </div>
           <div style="display:flex;align-items:flex-start;gap:12px;padding:0.875rem 1rem;background:var(--off);border-radius:var(--r);border-left:3px solid #D4700E;">
-            <div style="flex-shrink:0;margin-top:2px;">
-              <span style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#D4700E;">DO · Impact</span>
-            </div>
-            <p style="font-size:0.875rem;color:var(--t2);line-height:1.6;">A learner contributing at their true capability level. An employed worker. Evidence for your programme. Social value for your sector.</p>
+            <span style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#D4700E;flex-shrink:0;margin-top:2px;">DO · Impact</span>
+            <p style="font-size:0.875rem;color:var(--t2);line-height:1.6;">A learner contributing at their true capability level. Evidence for your programme. Social value for your sector.</p>
           </div>
         </div>
       </div>
 
-      <!-- Trapezium SVG diagram -->
-      <div class="reveal" style="position:sticky;top:84px;">
-        <svg viewBox="0 0 560 520" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;" aria-label="The Trapezium Model — Identity, Character, Competence, Impact">
-
-          <!-- Title -->
-          <text x="280" y="26" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif" font-size="15" font-weight="600" fill="#0D1B2A" letter-spacing="-0.3">Trapezium Model</text>
-
-          <!-- DO label -->
-          <text x="280" y="56" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif" font-size="10" font-weight="700" fill="#374151" letter-spacing="1.5">DO</text>
-          <text x="280" y="70" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif" font-size="9" fill="#6B7280">(Competence, Impact, Exploits)</text>
-
-          <!-- BE left label -->
-          <text transform="translate(14,290) rotate(-90)" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif" font-size="10" font-weight="700" fill="#374151" letter-spacing="1.5">BE</text>
-          <text transform="translate(27,290) rotate(-90)" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif" font-size="8.5" fill="#6B7280">(Character, Strength, Rootedness)</text>
-
-          <!-- BE right label -->
-          <text transform="translate(546,290) rotate(90)" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif" font-size="10" font-weight="700" fill="#374151" letter-spacing="1.5">BE</text>
-          <text transform="translate(533,290) rotate(90)" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif" font-size="8.5" fill="#6B7280">(Character, Strength, Rootedness)</text>
-
-          <!-- Band 4: IMPACT (top, orange) -->
+      <div class="reveal" style="position:sticky;top:72px;">
+        <svg viewBox="0 0 560 520" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;" aria-label="The Trapezium Model">
+          <text x="280" y="26" text-anchor="middle" font-family="'DM Sans',system-ui,sans-serif" font-size="15" font-weight="600" fill="#0D1B2A" letter-spacing="-0.3">Trapezium Model</text>
+          <text x="280" y="56" text-anchor="middle" font-family="'DM Sans',system-ui,sans-serif" font-size="10" font-weight="700" fill="#374151" letter-spacing="1.5">DO</text>
+          <text x="280" y="70" text-anchor="middle" font-family="'DM Sans',system-ui,sans-serif" font-size="9" fill="#6B7280">(Competence, Impact, Exploits)</text>
+          <text transform="translate(14,290) rotate(-90)" text-anchor="middle" font-family="'DM Sans',system-ui,sans-serif" font-size="10" font-weight="700" fill="#374151" letter-spacing="1.5">BE</text>
+          <text transform="translate(27,290) rotate(-90)" text-anchor="middle" font-family="'DM Sans',system-ui,sans-serif" font-size="8.5" fill="#6B7280">(Character, Strength, Rootedness)</text>
+          <text transform="translate(546,290) rotate(90)" text-anchor="middle" font-family="'DM Sans',system-ui,sans-serif" font-size="10" font-weight="700" fill="#374151" letter-spacing="1.5">BE</text>
+          <text transform="translate(533,290) rotate(90)" text-anchor="middle" font-family="'DM Sans',system-ui,sans-serif" font-size="8.5" fill="#6B7280">(Character, Strength, Rootedness)</text>
           <polygon points="180,90 380,90 416,172 144,172" fill="#D4700E"/>
-
-          <!-- Band 3: COMPETENCE (teal/green) -->
           <polygon points="144,172 416,172 452,254 108,254" fill="#00897B"/>
-
-          <!-- Band 2: CHARACTER (blue) -->
           <polygon points="108,254 452,254 488,336 72,336" fill="#2B7DC1"/>
-
-          <!-- Band 1: IDENTITY (bottom, purple) -->
           <polygon points="72,336 488,336 524,418 36,418" fill="#6B4E9E"/>
-
-          <!-- Subtle separators -->
           <line x1="144" y1="172" x2="416" y2="172" stroke="white" stroke-width="1.5" opacity="0.25"/>
           <line x1="108" y1="254" x2="452" y2="254" stroke="white" stroke-width="1.5" opacity="0.25"/>
           <line x1="72" y1="336" x2="488" y2="336" stroke="white" stroke-width="1.5" opacity="0.25"/>
-
-          <!-- Band labels -->
-          <text x="280" y="136" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif" font-size="13" font-weight="700" fill="white" letter-spacing="2.5">IMPACT</text>
-
-          <text x="280" y="218" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif" font-size="13" font-weight="700" fill="white" letter-spacing="2.5">COMPETENCE</text>
-
-          <text x="280" y="300" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif" font-size="13" font-weight="700" fill="white" letter-spacing="2.5">CHARACTER</text>
-
-          <text x="280" y="382" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif" font-size="13" font-weight="700" fill="white" letter-spacing="2.5">IDENTITY</text>
-
-          <!-- KNOW label -->
-          <text x="280" y="442" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif" font-size="10" font-weight="700" fill="#374151" letter-spacing="1.5">KNOW</text>
-          <text x="280" y="456" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif" font-size="9" fill="#6B7280">(Identity, Faith, Awareness)</text>
-
-          <!-- Bottom base line -->
+          <text x="280" y="136" text-anchor="middle" font-family="'DM Sans',system-ui,sans-serif" font-size="13" font-weight="700" fill="white" letter-spacing="2.5">IMPACT</text>
+          <text x="280" y="218" text-anchor="middle" font-family="'DM Sans',system-ui,sans-serif" font-size="13" font-weight="700" fill="white" letter-spacing="2.5">COMPETENCE</text>
+          <text x="280" y="300" text-anchor="middle" font-family="'DM Sans',system-ui,sans-serif" font-size="13" font-weight="700" fill="white" letter-spacing="2.5">CHARACTER</text>
+          <text x="280" y="382" text-anchor="middle" font-family="'DM Sans',system-ui,sans-serif" font-size="13" font-weight="700" fill="white" letter-spacing="2.5">IDENTITY</text>
+          <text x="280" y="442" text-anchor="middle" font-family="'DM Sans',system-ui,sans-serif" font-size="10" font-weight="700" fill="#374151" letter-spacing="1.5">KNOW</text>
+          <text x="280" y="456" text-anchor="middle" font-family="'DM Sans',system-ui,sans-serif" font-size="9" fill="#6B7280">(Identity, Faith, Awareness)</text>
           <line x1="36" y1="418" x2="524" y2="418" stroke="#E5E7EB" stroke-width="1"/>
         </svg>
       </div>
-
     </div>
 
-    <!-- Identity statement output -->
+    <!-- Identity statement example -->
     <div class="trap-output reveal">
       <div>
         <p class="trap-out-label">Tangible output — Pillar 1: Identity</p>
         <p class="trap-out-title">Every learner receives a<br><strong>personalised identity statement.</strong></p>
-        <p class="trap-out-body">Before a single vocabulary word is taught, EmployaLingua® generates a bilingual identity statement for each learner — in English and their native language. It names their background, their capability, and their professional story.</p>
-        <p class="trap-out-body" style="margin-top:0.875rem;">A learner who has been genuinely seen before being asked to learn is a learner who completes. This is what drives engagement, retention, and employment outcomes — not gamification alone.</p>
+        <p class="trap-out-body">Before a single vocabulary word is taught, EmployaLingua® generates a bilingual identity statement for each learner. It names their background, their capability, and their professional story. A learner who has been seen before being asked to learn is a learner who completes.</p>
       </div>
       <div>
         <div class="trap-statement">
@@ -869,256 +744,56 @@
 </section>
 
 
-<!-- BENEFIT 3: EVIDENCE + COMPLIANCE -->
-<section class="benefit dark" id="evidence">
-  <div class="wrap">
-    <div class="benefit-grid">
-      <div class="benefit-copy">
-        <p class="ey dim">Evidence</p>
-        <h2 class="inv">Every learner.<br>Every activity.<br><strong>Fully evidenced.</strong></h2>
-        <p class="lead inv">One audit trail. Exportable on demand. Every framework your funders require — covered. Learner data processed exclusively within UK Azure data centres under Microsoft's enterprise agreement.</p>
-      </div>
-      <div class="reveal">
-        <div class="compliance-list">
-          <div class="cl-item">
-            <div class="cl-ico"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-            <div><p class="cl-title">UK Azure data residency — Microsoft for Startups</p><p class="cl-desc">All learner data processed within UK Microsoft Azure data centres. No data used for AI model training. Full Microsoft enterprise DPA available for NHS Trusts, Local Authorities, and DWP-contracted providers.</p></div>
-          </div>
-          <div class="cl-item">
-            <div class="cl-ico"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-            <div><p class="cl-title">DWP Distance-Travelled Framework</p><p class="cl-desc">Pre/post vocational fluency data exportable per learner and per cohort for distance-travelled reporting.</p></div>
-          </div>
-          <div class="cl-item">
-            <div class="cl-ico"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-            <div><p class="cl-title">Skills England Growth and Skills Levy</p><p class="cl-desc">Sector-specific modular learning aligned to the new Skills England framework and funding criteria.</p></div>
-          </div>
-          <div class="cl-item">
-            <div class="cl-ico"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-            <div><p class="cl-title">Social Value Act 2012</p><p class="cl-desc">Progression into skilled employment evidenced per participant for Social Value reporting and funder reviews.</p></div>
-          </div>
-          <div class="cl-item">
-            <div class="cl-ico"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-            <div><p class="cl-title">CEFR Passport + Smart CV</p><p class="cl-desc">Auto-generated bilingual evidence per learner — timestamped, downloadable, employer-ready.</p></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- PARTNER PORTAL -->
-<section class="benefit light" id="partner-portal">
-  <div class="wrap">
-    <div class="benefit-grid flip">
-      <div class="benefit-copy">
-        <p class="ey">Partner portal</p>
-        <h2>See exactly where<br><strong>your cohort is.</strong></h2>
-        <p class="lead">The partner portal gives your team a live view of cohort progress. Not a monthly report — a real-time dashboard. See who is employment-ready. Access CEFR Passports and Smart CVs with learner consent.</p>
-        <div class="b-bullets" style="margin-top:1.5rem;">
-          <p class="bb">Track CEFR level and path progress per learner in real time</p>
-          <p class="pb" style="display:flex;align-items:flex-start;gap:9px;font-size:0.9375rem;color:var(--t2);">Identify employment-ready learners before programme end</p>
-          <p class="bb">Access bilingual Smart CVs with learner consent — one click</p>
-          <p class="bb">Export cohort data for DWP distance-travelled reporting</p>
-          <p class="bb">Social Value evidence per participant, per programme</p>
-        </div>
-      </div>
-      <div class="reveal">
-        <div class="mock">
-          <div class="mock-hd">
-            <span class="mock-hd-t">Partner Portal — Healthcare Cohort · Manchester</span>
-            <span class="mock-live">Live</span>
-          </div>
-          <div class="mock-stats">
-            <div class="ms"><p class="ms-v">24</p><p class="ms-l">Active learners</p></div>
-            <div class="ms"><p class="ms-v green">7</p><p class="ms-l">Employment-ready</p></div>
-            <div class="ms"><p class="ms-v purple">9</p><p class="ms-l">Employed — advancing</p></div>
-            <div class="ms"><p class="ms-v">83%</p><p class="ms-l">7-day engagement</p></div>
-          </div>
-          <div class="mock-rows">
-            <div class="mr">
-              <div class="mr-av">AH</div>
-              <div class="mr-info"><p class="mr-name">Amara Hassan</p><p class="mr-sub">Healthcare · Day 22</p></div>
-              <div class="mr-lvl">A2</div>
-              <div class="mr-bar"><div class="mr-bar-t"><div class="mr-bar-f" style="width:74%"></div></div><p class="mr-pct">74%</p></div>
-              <div class="mr-status"><span class="mr-prog">In progress</span></div>
-            </div>
-            <div class="mr">
-              <div class="mr-av" style="background:#E8F5E9;color:#2E7D32;">KM</div>
-              <div class="mr-info"><p class="mr-name">Khalid Mansour</p><p class="mr-sub">Healthcare · Day 41</p></div>
-              <div class="mr-lvl" style="background:#E8F5E9;color:#2E7D32;">B1</div>
-              <div class="mr-bar"><div class="mr-bar-t"><div class="mr-bar-f" style="width:100%;background:#2E7D32;"></div></div><p class="mr-pct" style="color:#2E7D32;">Complete</p></div>
-              <div class="mr-status"><span class="mr-ready">Job-ready</span></div>
-            </div>
-            <div class="mr">
-              <div class="mr-av" style="background:#F3E5F5;color:#7B1FA2;">OD</div>
-              <div class="mr-info"><p class="mr-name">Omar Diallo</p><p class="mr-sub">Healthcare · Employed · A2 → B1</p></div>
-              <div class="mr-lvl" style="background:#F3E5F5;color:#7B1FA2;">A2</div>
-              <div class="mr-bar"><div class="mr-bar-t"><div class="mr-bar-f" style="width:58%;background:#7B1FA2;"></div></div><p class="mr-pct">58%</p></div>
-              <div class="mr-status"><span style="font-size:0.72rem;font-weight:600;color:#7B1FA2;background:#F3E5F5;padding:3px 9px;border-radius:12px;white-space:nowrap;">Advancing</span></div>
-            </div>
-            <div class="mr">
-              <div class="mr-av" style="background:#FFF8E1;color:#F57F17;">RN</div>
-              <div class="mr-info"><p class="mr-name">Rania Nasser</p><p class="mr-sub">Healthcare · Day 8</p></div>
-              <div class="mr-lvl" style="background:#FFF8E1;color:#F57F17;">A1</div>
-              <div class="mr-bar"><div class="mr-bar-t"><div class="mr-bar-f" style="width:32%;background:#F57F17;"></div></div><p class="mr-pct">32%</p></div>
-              <div class="mr-status"><span class="mr-prog">In progress</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- APP SCREENS -->
-<section class="app-section-v4">
-  <div class="wrap">
-    <div class="app-grid-v4">
-      <div>
-        <p class="ey dim">The app</p>
-        <h2 class="inv">From first word<br><strong>to first interview.</strong></h2>
-        <p class="lead inv">Three screens — the learner's live path, their CEFR Passport, and the Smart CV. All auto-generated. All bilingual. This is what your cohort sees every day.</p>
-        <div style="display:flex;gap:0.625rem;flex-wrap:wrap;margin-top:1.5rem;">
-          <a href="#" class="badge-store"><svg width="18" height="22" viewBox="0 0 20 24" fill="none"><path d="M16.462 12.52c-.028-3.22 2.633-4.783 2.752-4.857-1.503-2.194-3.836-2.494-4.662-2.522-1.983-.2-3.874 1.174-4.878 1.174-1.004 0-2.546-1.146-4.188-1.115-2.148.033-4.136 1.25-5.241 3.16-2.24 3.876-.573 9.612 1.607 12.757 1.063 1.54 2.325 3.267 3.985 3.204 1.6-.064 2.205-1.032 4.14-1.032 1.936 0 2.487 1.032 4.188.998 1.72-.03 2.812-1.565 3.868-3.11 1.222-1.776 1.72-3.505 1.748-3.592-.038-.017-3.35-1.29-3.319-5.065zM13.337 3.46C14.198 2.42 14.785.998 14.62-.006c-1.126.047-2.493.748-3.3 1.77-.718.882-1.358 2.315-1.187 3.677 1.257.098 2.548-.636 3.204-1.981z" fill="white"/></svg><div class="bs-text"><span class="bs-sub">Download on the</span><span class="bs-name">App Store</span></div></a>
-          <a href="#" class="badge-store"><svg width="18" height="20" viewBox="0 0 20 22" fill="none"><path d="M.429.554C.163.836 0 1.27 0 1.838v18.324c0 .568.163 1.002.437 1.276l.067.065 10.264-10.264v-.241L.496.489.43.554z" fill="white" fill-opacity=".8"/><path d="M14.205 14.682l-3.437-3.44v-.254l3.44-3.44.078.044 4.073 2.313c1.163.66 1.163 1.742 0 2.406l-4.073 2.313-.081.058z" fill="white"/><path d="M14.286 14.624L10.768 11.1.429 21.438c.382.407 1.018.457 1.734.051l12.123-6.865" fill="white" fill-opacity=".6"/><path d="M14.286 7.576L2.163.712C1.447.298.811.356.429.763l10.339 10.34 3.518-3.527z" fill="white" fill-opacity=".6"/></svg><div class="bs-text"><span class="bs-sub">Get it on</span><span class="bs-name">Google Play</span></div></a>
-          <span style="font-size:0.78rem;color:rgba(255,255,255,0.28);font-style:italic;align-self:center;">Coming soon</span>
-        </div>
-      </div>
-      <div class="phones reveal">
-        <div class="ph t">
-          <div class="ph-notch"><div class="ph-pill"></div></div>
-          <div class="ph-status"><span>9:41</span><span>●●● ▮▮</span></div>
-          <div class="ph-body">
-            <div class="ph-greet">مرحباً — Good morning<strong>Amara</strong></div>
-            <div class="ph-streak"><div class="ph-flame"><svg viewBox="0 0 24 24"><path d="M12 2s-6 5-6 11a6 6 0 0012 0C18 7 12 2 12 2z"/></svg></div><div><div class="ph-sn">12</div><div class="ph-ss">day streak</div></div></div>
-            <div class="ph-today"><div class="ph-today-ey">Today · Healthcare · A2</div><div class="ph-today-t">Conversation sim: responding to a supervisor during handover</div><div class="ph-today-b">Start →</div></div>
-            <div class="ph-pr">
-              <div class="ph-pc"><div class="ph-pv">47</div><div class="ph-pl">words mastered</div><div class="ph-pb"><div class="ph-pbf" style="width:62%"></div></div></div>
-              <div class="ph-pc"><div class="ph-pv">A2</div><div class="ph-pl">current level</div><div class="ph-pb"><div class="ph-pbf" style="width:45%"></div></div></div>
-            </div>
-          </div>
-        </div>
-        <div class="ph m">
-          <div class="ph-notch"><div class="ph-pill"></div></div>
-          <div class="ph-status"><span>9:41</span><span>●●● ▮▮</span></div>
-          <div class="ph-body">
-            <div class="ph-lbl">CEFR Passport</div>
-            <div class="ph-pass-head"><div class="ph-av">AH</div><div><div class="ph-pass-name">Amara Hassan</div><div class="ph-pass-sub">Healthcare · England</div></div><div class="ph-pass-badge">A2</div></div>
-            <div class="ph-narrative"><p>"Amara can understand sentences relating to patient care, introduce herself to colleagues, and follow simple workplace instructions in English and Arabic."</p></div>
-            <div class="ph-lbl">Level progress</div>
-            <div class="ph-levels">
-              <div class="ph-lvl"><div class="ph-chip dn">A1</div><div class="ph-lvl-bar"><div class="ph-lvl-fill" style="width:100%"></div></div><span class="ph-lvl-txt">Complete</span></div>
-              <div class="ph-lvl"><div class="ph-chip cu">A2</div><div class="ph-lvl-bar"><div class="ph-lvl-fill" style="width:45%"></div></div><span class="ph-lvl-txt">45%</span></div>
-              <div class="ph-lvl"><div class="ph-chip lk">B1</div><div class="ph-lvl-bar"><div class="ph-lvl-fill" style="width:0%"></div></div><span class="ph-lvl-txt">Locked</span></div>
-            </div>
-          </div>
-        </div>
-        <div class="ph s">
-          <div class="ph-notch"><div class="ph-pill"></div></div>
-          <div class="ph-status"><span>9:41</span><span>●●● ▮▮</span></div>
-          <div class="ph-body">
-            <div class="ph-lbl">Smart CV</div>
-            <div class="ph-pass-head"><div class="ph-av">AH</div><div><div class="ph-pass-name">Amara Hassan</div><div class="ph-pass-sub">Healthcare · CEFR A2</div></div></div>
-            <div class="ph-cv-items">
-              <div class="ph-cv-item"><div class="ph-cv-dot"></div><span class="ph-cv-t">47 healthcare vocabulary words mastered</span></div>
-              <div class="ph-cv-item"><div class="ph-cv-dot"></div><span class="ph-cv-t">12 workplace reading passages completed</span></div>
-              <div class="ph-cv-item"><div class="ph-cv-dot"></div><span class="ph-cv-t">3 AI conversation simulations passed</span></div>
-              <div class="ph-cv-item"><div class="ph-cv-dot"></div><span class="ph-cv-t">A1 assessment gate passed</span></div>
-            </div>
-            <div class="ph-cv-dl">Download CV — English &amp; Arabic</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- VALIDATION -->
+<!-- VALIDATION + SECTORS combined -->
 <section class="validation" id="validation">
   <div class="wrap">
     <div class="val-grid">
       <div>
         <p class="ey">Built in partnership</p>
         <h2>Tested in Manchester<br><strong>by the people it serves.</strong></h2>
-        <p class="lead" style="margin-bottom:0;">Not designed in an office. Built with ESOL learners, refugee charities, and community organisations across Greater Manchester — then changed based on what they said.</p>
-        <div class="val-outcomes" style="margin-top:1.5rem;">
-          <div class="val-out"><div class="val-out-dot"></div><p>Delivered under <strong>WEA-funded and Greater Manchester Combined Authority programmes</strong></p></div>
-          <div class="val-out"><div class="val-out-dot"></div><p>Aligned with UK Government Skills England and DWP distance-travelled frameworks</p></div>
-          <div class="val-out"><div class="val-out-dot"></div><p>Available for commissioning by Local Authorities, training providers, FE colleges, and NHS workforce teams across all ten GM boroughs</p></div>
-        </div>
-      </div>
-      <div>
+        <p class="lead" style="margin-bottom:1.5rem;">Not designed in an office. Built with ESOL learners, refugee charities, and community organisations across Greater Manchester.</p>
+
         <div class="partner-stack">
-          <div class="pc reveal">
+          <div class="pc">
             <div class="pc-top"><span class="pc-badge">MEaP</span><div><p class="pc-name">Making Education a Priority</p><p class="pc-loc">Manchester</p></div></div>
             <p class="pc-desc">ESOL and education partner. MEaP brought direct programme expertise and learner access to the EmployaLingua® prototype testing and development process.</p>
           </div>
-          <div class="pc reveal d1">
+          <div class="pc">
             <div class="pc-top"><span class="pc-badge">BRASS</span><div><p class="pc-name">Befriending Refugees and Asylum Seekers</p><p class="pc-loc">Bolton</p></div></div>
-            <p class="pc-desc">Community partner based in Bolton. BRASS shaped the platform's dignity-first design through direct feedback from refugees and asylum seekers across Greater Manchester.</p>
+            <p class="pc-desc">Community partner. BRASS shaped the platform's dignity-first design through direct feedback from refugees and asylum seekers across Greater Manchester.</p>
           </div>
-          <div class="quote-slot reveal d2">
-            <p class="qs-lbl">Partner testimonial</p>
-            <p class="qs-setup">Many of the learners who tested the prototype already knew what they were capable of. They had qualifications, careers — in other countries, in other languages. EmployaLingua® finally met them at their level.</p>
-            <span class="qs-openquote">"</span>
-            <p class="qs-body">EmployaLingua is a game changer. We saw our students test the platform and their faces lit up. They were really impressed by the personalised learning plan.</p>
-            <div class="qs-attr-wrap">
-              <div class="qs-av">MD</div>
-              <div class="qs-attr">Director<span>Making Education a Priority (MEaP), Manchester</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="quote-slot">
+          <p class="qs-lbl">Partner testimonial</p>
+          <p class="qs-setup">Many of the learners who tested the prototype already knew what they were capable of. They had qualifications, careers — in other countries, in other languages. EmployaLingua® finally met them at their level.</p>
+          <span class="qs-openquote">"</span>
+          <p class="qs-body">EmployaLingua is a game changer. We saw our students test the platform and their faces lit up. They were really impressed by the personalised learning plan.</p>
+          <div class="qs-attr-wrap">
+            <div class="qs-av">MD</div>
+            <div class="qs-attr">Director<span>Making Education a Priority (MEaP), Manchester</span></div>
+          </div>
+        </div>
+
+        <!-- Sectors compact -->
+        <div style="margin-top:1.25rem;">
+          <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--t3);margin-bottom:0.875rem;">Four sector pathways</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.625rem;">
+            <div style="display:flex;align-items:center;gap:8px;padding:0.75rem;background:var(--off);border-radius:var(--r);border:1px solid var(--border);border-left:3px solid #E53935;">
+              <div><p style="font-size:0.875rem;font-weight:600;color:var(--t1);">Healthcare</p><p style="font-size:0.75rem;color:var(--t3);">NHS · Social Care · ICS</p></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;padding:0.75rem;background:var(--off);border-radius:var(--r);border:1px solid var(--border);border-left:3px solid #F57C00;">
+              <div><p style="font-size:0.875rem;font-weight:600;color:var(--t1);">Construction</p><p style="font-size:0.75rem;color:var(--t3);">CITB · Site Safety · Trades</p></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;padding:0.75rem;background:var(--off);border-radius:var(--r);border:1px solid var(--border);border-left:3px solid var(--teal);">
+              <div><p style="font-size:0.875rem;font-weight:600;color:var(--t1);">Digital</p><p style="font-size:0.75rem;color:var(--t3);">Tech · Digital Workforce</p></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;padding:0.75rem;background:var(--off);border-radius:var(--r);border:1px solid var(--border);border-left:3px solid #6B4E9E;">
+              <div><p style="font-size:0.875rem;font-weight:600;color:var(--t1);">Teaching</p><p style="font-size:0.75rem;color:var(--t3);">TA · SEND · Schools</p></div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- SECTORS -->
-<section class="sectors" id="sectors">
-  <div class="wrap">
-    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2rem;">
-      <div>
-        <p class="ey">Sector pathways</p>
-        <h2 style="margin-bottom:0;">Four sectors. <strong>Built from the inside out.</strong></h2>
-      </div>
-      <p style="font-size:0.875rem;color:var(--t3);max-width:380px;line-height:1.65;">Aligned with Skills England, the NHS Long Term Workforce Plan, and the Greater Manchester LSIP.</p>
-    </div>
-    <div class="sector-grid">
-      <div class="sc reveal" style="border-top:3px solid #E53935;">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:0.5rem;">
-          <div class="sc-ico" style="background:rgba(229,57,53,0.08);flex-shrink:0;"><svg viewBox="0 0 24 24" style="stroke:#E53935;"><path d="M12 6v12M6 12h12"/></svg></div>
-          <p class="sc-name">Healthcare</p>
-        </div>
-        <p class="sc-desc">Clinical vocabulary, care settings, NHS handover language, and patient-facing register.</p>
-        <span class="sc-tag" style="background:rgba(229,57,53,0.08);color:#C62828;">NHS · Social Care · ICS</span>
-      </div>
-      <div class="sc reveal d1" style="border-top:3px solid #F57C00;">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:0.5rem;">
-          <div class="sc-ico" style="background:rgba(245,124,0,0.08);flex-shrink:0;"><svg viewBox="0 0 24 24" style="stroke:#F57C00;"><path d="M3 21h18M5 21V10l7-7 7 7v11M9 21v-6h6v6"/></svg></div>
-          <p class="sc-name">Construction</p>
-        </div>
-        <p class="sc-desc">Site safety language, trades terminology, supervisor instructions, and compliance vocabulary.</p>
-        <span class="sc-tag" style="background:rgba(245,124,0,0.08);color:#E65100;">CITB · Site Safety · Trades</span>
-      </div>
-      <div class="sc reveal d2" style="border-top:3px solid var(--teal);">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:0.5rem;">
-          <div class="sc-ico" style="flex-shrink:0;"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-          <p class="sc-name">Digital</p>
-        </div>
-        <p class="sc-desc">Workplace technology language, agile vocabulary, and professional digital register.</p>
-        <span class="sc-tag">Tech · Digital Workforce</span>
-      </div>
-      <div class="sc reveal d3" style="border-top:3px solid #6B4E9E;">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:0.5rem;">
-          <div class="sc-ico" style="background:rgba(107,78,158,0.08);flex-shrink:0;"><svg viewBox="0 0 24 24" style="stroke:#6B4E9E;"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/><path d="M12 14v7"/></svg></div>
-          <p class="sc-name">Teaching</p>
-        </div>
-        <p class="sc-desc">Classroom vocabulary, TA language, SEND terminology, and safeguarding register.</p>
-        <span class="sc-tag" style="background:rgba(107,78,158,0.08);color:#4A148C;">TA · SEND · Schools · Early Years</span>
       </div>
     </div>
   </div>
@@ -1130,20 +805,20 @@
   <div class="wrap">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,4vw,4rem);align-items:start;margin-bottom:2rem;">
       <div>
-        <p class="ey centered" style="justify-content:flex-start;">Pricing</p>
+        <p class="ey">Pricing</p>
         <h2 style="margin-bottom:0.75rem;">Transparent pricing.<br><strong>Scoped to your cohort.</strong></h2>
-        <p style="font-size:0.9375rem;color:var(--t3);line-height:1.7;">Per-learner monthly pricing. No hidden setup costs. No lock-in. Early commissioning conversations receive preferential pricing.</p>
+        <p style="font-size:0.9375rem;color:var(--t3);line-height:1.7;">Per-learner monthly pricing. No setup costs. No lock-in. Early commissioning conversations receive preferential pricing.</p>
       </div>
-      <div style="background:var(--navy);border-radius:var(--r-lg);padding:1.5rem;">
-        <p style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal-mid);margin-bottom:1rem;">Included in all tiers</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem 1.25rem;">
+      <div style="background:var(--navy);border-radius:var(--r-lg);padding:1.375rem;">
+        <p style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal-mid);margin-bottom:0.875rem;">Included in all tiers</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem 1rem;">
           <p style="font-size:0.8125rem;color:rgba(255,255,255,0.65);display:flex;align-items:flex-start;gap:7px;line-height:1.5;"><span style="color:var(--teal);flex-shrink:0;">✓</span>All four sector pathways</p>
-          <p style="font-size:0.8125rem;color:rgba(255,255,255,0.65);display:flex;align-items:flex-start;gap:7px;line-height:1.5;"><span style="color:var(--teal);flex-shrink:0;">✓</span>CEFR-tracked A1 → B2</p>
+          <p style="font-size:0.8125rem;color:rgba(255,255,255,0.65);display:flex;align-items:flex-start;gap:7px;line-height:1.5;"><span style="color:var(--teal);flex-shrink:0;">✓</span>CEFR-tracked A1 → C1</p>
           <p style="font-size:0.8125rem;color:rgba(255,255,255,0.65);display:flex;align-items:flex-start;gap:7px;line-height:1.5;"><span style="color:var(--teal);flex-shrink:0;">✓</span>Bilingual AI conversationalists</p>
           <p style="font-size:0.8125rem;color:rgba(255,255,255,0.65);display:flex;align-items:flex-start;gap:7px;line-height:1.5;"><span style="color:var(--teal);flex-shrink:0;">✓</span>Native-language delivery</p>
           <p style="font-size:0.8125rem;color:rgba(255,255,255,0.65);display:flex;align-items:flex-start;gap:7px;line-height:1.5;"><span style="color:var(--teal);flex-shrink:0;">✓</span>Smart CV + CEFR Passport</p>
-          <p style="font-size:0.8125rem;color:rgba(255,255,255,0.65);display:flex;align-items:flex-start;gap:7px;line-height:1.5;"><span style="color:var(--teal);flex-shrink:0;">✓</span>Partner portal access</p>
           <p style="font-size:0.8125rem;color:rgba(255,255,255,0.65);display:flex;align-items:flex-start;gap:7px;line-height:1.5;"><span style="color:var(--teal);flex-shrink:0;">✓</span>DWP distance-travelled reporting</p>
+          <p style="font-size:0.8125rem;color:rgba(255,255,255,0.65);display:flex;align-items:flex-start;gap:7px;line-height:1.5;"><span style="color:var(--teal);flex-shrink:0;">✓</span>Partner portal access</p>
           <p style="font-size:0.8125rem;color:rgba(255,255,255,0.65);display:flex;align-items:flex-start;gap:7px;line-height:1.5;"><span style="color:var(--teal);flex-shrink:0;">✓</span>Azure UK data residency</p>
         </div>
       </div>
@@ -1205,252 +880,40 @@
       <div class="roi-copy">
         <p class="ey dim">Return on investment</p>
         <h2 class="inv">The numbers your finance team<br><strong>will actually ask about.</strong></h2>
-        <p class="lead inv">Every employment outcome generates a return — through placement payments, reduced re-referral costs, and Social Value evidence for your next contract renewal. EmployaLingua® is not a cost. It is a multiplier.</p>
-        <div style="display:flex;flex-direction:column;gap:0.875rem;margin-top:1.5rem;">
-          <div style="display:flex;align-items:flex-start;gap:10px;">
-            <div style="width:5px;height:5px;background:var(--teal);border-radius:50%;margin-top:9px;flex-shrink:0;"></div>
-            <p style="font-size:0.9375rem;color:rgba(255,255,255,0.6);line-height:1.6;">DWP placement payment rates range from £1,200 to £6,000 per sustained outcome depending on programme type and participant group</p>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:10px;">
-            <div style="width:5px;height:5px;background:var(--teal);border-radius:50%;margin-top:9px;flex-shrink:0;"></div>
-            <p style="font-size:0.9375rem;color:rgba(255,255,255,0.6);line-height:1.6;">Language barriers are cited in over 40% of failed placements in healthcare and construction sectors</p>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:10px;">
-            <div style="width:5px;height:5px;background:var(--teal);border-radius:50%;margin-top:9px;flex-shrink:0;"></div>
-            <p style="font-size:0.9375rem;color:rgba(255,255,255,0.6);line-height:1.6;">Every additional employment outcome reduces your cost-per-placement across the programme</p>
-          </div>
+        <p class="lead inv">Every employment outcome generates a return — through placement payments, reduced re-referral costs, and Social Value evidence for your next contract renewal.</p>
+        <div style="display:flex;flex-direction:column;gap:0.75rem;margin-top:1.25rem;">
+          <div style="display:flex;align-items:flex-start;gap:10px;"><div style="width:5px;height:5px;background:var(--teal);border-radius:50%;margin-top:8px;flex-shrink:0;"></div><p style="font-size:0.875rem;color:rgba(255,255,255,0.55);line-height:1.6;">DWP placement payments range from £1,200 to £6,000 per sustained outcome depending on programme type</p></div>
+          <div style="display:flex;align-items:flex-start;gap:10px;"><div style="width:5px;height:5px;background:var(--teal);border-radius:50%;margin-top:8px;flex-shrink:0;"></div><p style="font-size:0.875rem;color:rgba(255,255,255,0.55);line-height:1.6;">Language barriers are cited in over 40% of failed placements in healthcare and construction</p></div>
         </div>
       </div>
-
       <div class="roi-calc">
         <p class="roi-calc-label">Estimate your return</p>
-
         <div class="roi-field">
           <label>Cohort size</label>
           <input type="range" id="roi-cohort" min="20" max="300" step="10" value="50">
-          <div class="roi-field-val">
-            <span class="roi-val-sub">20 learners</span>
-            <span class="roi-val"><span id="roi-cohort-val">50</span> learners</span>
-            <span class="roi-val-sub">300 learners</span>
-          </div>
+          <div class="roi-field-val"><span class="roi-val-sub">20</span><span class="roi-val"><span id="roi-cohort-val">50</span> learners</span><span class="roi-val-sub">300</span></div>
         </div>
-
         <div class="roi-field">
           <label>Expected employment rate (%)</label>
           <input type="range" id="roi-rate" min="20" max="80" step="5" value="45">
-          <div class="roi-field-val">
-            <span class="roi-val-sub">20%</span>
-            <span class="roi-val"><span id="roi-rate-val">45</span>%</span>
-            <span class="roi-val-sub">80%</span>
-          </div>
+          <div class="roi-field-val"><span class="roi-val-sub">20%</span><span class="roi-val"><span id="roi-rate-val">45</span>%</span><span class="roi-val-sub">80%</span></div>
         </div>
-
         <div class="roi-field">
           <label>Placement payment per outcome (£)</label>
           <input type="range" id="roi-payment" min="1200" max="6000" step="200" value="3000">
-          <div class="roi-field-val">
-            <span class="roi-val-sub">£1,200</span>
-            <span class="roi-val">£<span id="roi-payment-val">3,000</span></span>
-            <span class="roi-val-sub">£6,000</span>
-          </div>
+          <div class="roi-field-val"><span class="roi-val-sub">£1,200</span><span class="roi-val">£<span id="roi-payment-val">3,000</span></span><span class="roi-val-sub">£6,000</span></div>
         </div>
-
         <div class="roi-result">
-          <div class="roi-metric">
-            <p class="roi-metric-label">Platform cost</p>
-            <p class="roi-metric-val" id="roi-cost">£1,500</p>
-            <p class="roi-metric-sub">per cohort cycle at Standard rate</p>
-          </div>
-          <div class="roi-metric">
-            <p class="roi-metric-label">Outcomes generated</p>
-            <p class="roi-metric-val" id="roi-outcomes">22</p>
-            <p class="roi-metric-sub">employed from cohort</p>
-          </div>
-          <div class="roi-metric">
-            <p class="roi-metric-label">Placement revenue</p>
-            <p class="roi-metric-val" id="roi-revenue">£67,500</p>
-            <p class="roi-metric-sub">at selected payment rate</p>
-          </div>
-          <div class="roi-metric highlight">
-            <p class="roi-metric-label">Return on investment</p>
-            <p class="roi-metric-val" id="roi-multiple">44×</p>
-            <p class="roi-metric-sub">platform cost to placement revenue</p>
-          </div>
+          <div class="roi-metric"><p class="roi-metric-label">Platform cost</p><p class="roi-metric-val" id="roi-cost">£1,500</p><p class="roi-metric-sub">per cohort cycle</p></div>
+          <div class="roi-metric"><p class="roi-metric-label">Outcomes</p><p class="roi-metric-val" id="roi-outcomes">22</p><p class="roi-metric-sub">employed from cohort</p></div>
+          <div class="roi-metric"><p class="roi-metric-label">Placement revenue</p><p class="roi-metric-val" id="roi-revenue">£67,500</p><p class="roi-metric-sub">at selected rate</p></div>
+          <div class="roi-metric highlight"><p class="roi-metric-label">Return</p><p class="roi-metric-val" id="roi-multiple">44×</p><p class="roi-metric-sub">cost to placement revenue</p></div>
         </div>
-
-        <p class="roi-note">Illustrative calculation based on DWP programme payment rates. Actual outcomes will vary by cohort, sector, and programme type. Contact us to model your specific provision.</p>
+        <p class="roi-note">Illustrative. Actual outcomes vary by cohort, sector, and programme type.</p>
       </div>
     </div>
   </div>
 </section>
-
-
-<!-- LIVE DEMO -->
-<section id="live-demo" style="background:#fff;padding:clamp(2rem,4vw,3.25rem) 0;border-bottom:1px solid var(--border);">
-  <div class="wrap">
-
-    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2rem;">
-      <div>
-        <p class="ey">Live demo</p>
-        <h2 style="margin-bottom:0;">See the identity engine<br><strong>working right now.</strong></h2>
-      </div>
-      <p style="font-size:0.875rem;color:var(--t3);max-width:360px;line-height:1.65;">Enter any learner background. Watch EmployaLingua® generate a personalised identity statement and their first sector vocabulary — in English and their native language simultaneously.</p>
-    </div>
-
-    <div style="border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;box-shadow:0 2px 16px rgba(12,42,92,0.06);">
-
-      <!-- Demo header -->
-      <div style="background:var(--navy);padding:12px 20px;display:flex;align-items:center;justify-content:space-between;">
-        <div>
-          <p style="font-size:13px;font-weight:500;color:rgba(255,255,255,0.9);">EmployaLingua® — Identity Engine</p>
-          <p style="font-size:11px;color:rgba(255,255,255,0.38);margin-top:1px;">Powered by Azure OpenAI · UK data residency · Trapezium Model — Pillar 1</p>
-        </div>
-        <span style="font-size:10px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:var(--teal-mid);background:rgba(0,137,123,0.18);border:1px solid rgba(0,137,123,0.3);border-radius:4px;padding:3px 8px;">Live · Azure OpenAI</span>
-      </div>
-
-      <!-- Demo body -->
-      <div id="el-demo-body" style="display:grid;grid-template-columns:280px 1fr;min-height:400px;">
-
-        <!-- Left: inputs -->
-        <div style="background:var(--off);border-right:1px solid var(--border);padding:20px;display:flex;flex-direction:column;gap:14px;">
-
-          <div>
-            <p style="font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--t3);margin-bottom:5px;">Learner background</p>
-            <textarea id="el-bg" rows="4" placeholder="e.g. Qualified nurse from Nigeria with 8 years clinical experience, now in Manchester working as a care assistant."
-              style="width:100%;font-family:var(--font-body);font-size:13px;color:var(--t1);background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:9px 11px;resize:none;line-height:1.5;"></textarea>
-          </div>
-
-          <div>
-            <p style="font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--t3);margin-bottom:6px;">Sector pathway</p>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;" id="el-sectors">
-              <button class="el-sector active hc" data-s="Healthcare" style="font-family:var(--font-body);font-size:12px;font-weight:500;padding:7px 8px;border-radius:6px;border:1.5px solid #E53935;background:rgba(229,57,53,0.06);color:#B71C1C;cursor:pointer;display:flex;align-items:center;gap:5px;"><span style="width:7px;height:7px;border-radius:50%;background:#E53935;flex-shrink:0;"></span>Healthcare</button>
-              <button class="el-sector co" data-s="Construction" style="font-family:var(--font-body);font-size:12px;font-weight:500;padding:7px 8px;border-radius:6px;border:0.5px solid var(--border);background:#fff;color:var(--t3);cursor:pointer;display:flex;align-items:center;gap:5px;"><span style="width:7px;height:7px;border-radius:50%;background:#F57C00;flex-shrink:0;"></span>Construction</button>
-              <button class="el-sector di" data-s="Digital" style="font-family:var(--font-body);font-size:12px;font-weight:500;padding:7px 8px;border-radius:6px;border:0.5px solid var(--border);background:#fff;color:var(--t3);cursor:pointer;display:flex;align-items:center;gap:5px;"><span style="width:7px;height:7px;border-radius:50%;background:var(--teal);flex-shrink:0;"></span>Digital</button>
-              <button class="el-sector te" data-s="Teaching" style="font-family:var(--font-body);font-size:12px;font-weight:500;padding:7px 8px;border-radius:6px;border:0.5px solid var(--border);background:#fff;color:var(--t3);cursor:pointer;display:flex;align-items:center;gap:5px;"><span style="width:7px;height:7px;border-radius:50%;background:#6B4E9E;flex-shrink:0;"></span>Teaching</button>
-            </div>
-          </div>
-
-          <div>
-            <p style="font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--t3);margin-bottom:6px;">Native language</p>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;" id="el-langs">
-              <button class="el-lang active" data-l="Arabic" style="font-family:var(--font-body);font-size:11px;font-weight:500;padding:7px 6px;border-radius:6px;border:1.5px solid var(--teal);background:rgba(0,137,123,0.06);color:var(--teal-dark);cursor:pointer;line-height:1.3;">Arabic<span style="display:block;font-size:12px;">العربية</span></button>
-              <button class="el-lang" data-l="Urdu" style="font-family:var(--font-body);font-size:11px;font-weight:500;padding:7px 6px;border-radius:6px;border:0.5px solid var(--border);background:#fff;color:var(--t3);cursor:pointer;line-height:1.3;">Urdu<span style="display:block;font-size:12px;">اردو</span></button>
-              <button class="el-lang" data-l="Farsi" style="font-family:var(--font-body);font-size:11px;font-weight:500;padding:7px 6px;border-radius:6px;border:0.5px solid var(--border);background:#fff;color:var(--t3);cursor:pointer;line-height:1.3;">Farsi<span style="display:block;font-size:12px;">فارسی</span></button>
-              <button class="el-lang" data-l="Tigrinya" style="font-family:var(--font-body);font-size:11px;font-weight:500;padding:7px 6px;border-radius:6px;border:0.5px solid var(--border);background:#fff;color:var(--t3);cursor:pointer;line-height:1.3;">Tigrinya<span style="display:block;font-size:12px;">ትግርኛ</span></button>
-            </div>
-          </div>
-
-          <button id="el-gen-btn" style="margin-top:auto;padding:10px 16px;background:var(--navy);color:#fff;border:none;border-radius:var(--r);font-family:var(--font-body);font-size:13px;font-weight:500;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            Generate identity statement
-          </button>
-        </div>
-
-        <!-- Right: output -->
-        <div id="el-output" style="background:#fff;padding:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;">
-          <div style="display:flex;flex-direction:column;align-items:center;gap:10px;opacity:0.5;">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            <p style="font-size:13px;font-weight:500;color:var(--t1);">Identity statement will appear here</p>
-            <p style="font-size:12px;color:var(--t3);text-align:center;line-height:1.6;max-width:260px;">Enter a learner's background, pick their sector and language, then click Generate.</p>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Demo footer -->
-      <div style="padding:10px 20px;background:var(--off);border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;">
-        <p style="font-size:11px;color:var(--t3);">This is Pillar 1 of the Trapezium Model — Identity. Every learner receives this before a single vocabulary word is taught.</p>
-        <a href="#register" style="font-size:11px;font-weight:600;color:var(--teal-dark);text-decoration:none;">Commission EmployaLingua® →</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<style>
-  #el-gen-btn:hover { background: #1a3d72; }
-  #el-gen-btn:disabled { opacity: 0.55; cursor: not-allowed; }
-  @keyframes el-blink { 0%,100%{opacity:1}50%{opacity:0} }
-  .el-cursor { display:inline-block;width:2px;height:13px;background:var(--teal-mid);margin-left:2px;vertical-align:middle;animation:el-blink 0.8s step-end infinite; }
-  @keyframes el-spin { to { transform: rotate(360deg); } }
-  .el-spinner { width:13px;height:13px;border:2px solid rgba(255,255,255,0.3);border-top-color:#fff;border-radius:50%;animation:el-spin 0.7s linear infinite; }
-  .el-vc { opacity:0;transform:translateY(6px);transition:opacity 0.3s,transform 0.3s; }
-  .el-vc.in { opacity:1;transform:none; }
-  @media(max-width:680px) { #el-demo-body { grid-template-columns:1fr!important; } }
-</style>
-
-
-<!-- LANG + POLICY -->
-<div class="lang-strip">
-  <div class="wrap">
-    <div class="lang-i">
-      <span class="lang-lbl">Available in</span>
-      <div class="lang-pills">
-        <span class="lang-pill">English</span>
-        <span class="lang-pill">Arabic — عربي</span>
-        <span class="lang-pill">Urdu — اردو</span>
-        <span class="lang-pill">Farsi — فارسی</span>
-        <span class="lang-pill">Tigrinya — ትግርኛ</span>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="policy-strip">
-  <div class="wrap">
-    <div class="policy-i">
-      <p class="policy-lbl">Funding &amp;<br>Policy Alignment</p>
-      <div class="policy-items">
-        <span class="pi">WEA — Workers' Educational Association</span>
-        <span class="pi">Greater Manchester Combined Authority</span>
-        <span class="pi">Skills England Growth and Skills Levy</span>
-        <span class="pi">Skills England AI Skills Framework</span>
-        <span class="pi">NHS Long Term Workforce Plan</span>
-        <span class="pi">Social Value Act 2012</span>
-        <span class="pi">DWP Distance-Travelled Framework</span>
-        <span class="pi">Greater Manchester LSIP</span>
-        <span class="pi">Manchester · Salford · Trafford · Tameside</span>
-        <span class="pi">Oldham · Rochdale · Stockport · Bolton · Wigan · Bury</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- BRIDGE SPLIT -->
-<section class="bridge" id="bridge-split">
-  <div class="wrap">
-    <div class="bridge-grid">
-      <div class="bridge-side">
-        <p class="bridge-label">For organisations</p>
-        <p class="bridge-title">You commission<br><strong>the platform.</strong></p>
-        <p class="bridge-sub">We handle deployment, reporting, and learner engagement. Your team monitors outcomes. The platform does the rest.</p>
-        <a href="#register" class="bridge-cta primary">Book a Partnership Consultation →</a>
-      </div>
-      <div class="bridge-divider"></div>
-      <div class="bridge-side">
-        <p class="bridge-label">For learners</p>
-        <p class="bridge-title">You use<br><strong>the platform.</strong></p>
-        <p class="bridge-sub">Your path is ready. Your first mission is waiting. Just tap Start — the AI takes you the rest of the way.</p>
-        <a href="/learn" class="bridge-cta ghost">Go to the Learners Portal →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- WHAT HAPPENS NEXT -->
-<div class="next-bar">
-  <div class="wrap">
-    <p class="next-lbl">Partnership process</p>
-    <div class="next-steps">
-      <div class="ns"><div class="ns-num">1</div><div><p class="ns-title">We contact you within 48 hours</p><p class="ns-sub">Directly from the EmployaLingua® team</p></div></div>
-      <div class="ns-arrow">→</div>
-      <div class="ns"><div class="ns-num">2</div><div><p class="ns-title">Partnership consultation</p><p class="ns-sub">Your cohort, your KPIs, your reporting requirements</p></div></div>
-      <div class="ns-arrow">→</div>
-      <div class="ns"><div class="ns-num">3</div><div><p class="ns-title">Scoped deployment proposal</p><p class="ns-sub">Pricing, timeline, and integration plan</p></div></div>
-    </div>
-  </div>
-</div>
 
 
 <!-- FORM -->
@@ -1555,7 +1018,7 @@
     <div class="foot-i">
       <a href="#" class="wm foot-wm">Employa<em>L</em>ingua<sup>®</sup></a>
       <div class="foot-meta">
-        <a href="/learn">For learners →</a> &nbsp;·&nbsp; <a href="/research/">Research</a> &nbsp;·&nbsp; <a href="https://employalingua.com">employalingua.com</a> &nbsp;·&nbsp; &copy; 2025 <a href="https://pthfndr.org" target="_blank" rel="noopener">Pathfinder Educational Ltd</a> &nbsp;·&nbsp; Co. No. 15659558<br>
+        <a href="/learn">For learners →</a> &nbsp;·&nbsp; <a href="/research/">Research</a> &nbsp;·&nbsp; <a href="https://employalingua.com">employalingua.com</a> &nbsp;·&nbsp; &copy; 2026 <a href="https://pthfndr.org" target="_blank" rel="noopener">Pathfinder Educational Ltd</a> &nbsp;·&nbsp; Co. No. 15659558<br>
         GM Digital Security Hub (DiSH), 47 Lloyd Street, Manchester, M2 5LE
       </div>
     </div>
@@ -1736,8 +1199,6 @@
           <p id="el-stmt" style="font-size:13px;color:rgba(255,255,255,0.85);line-height:1.7;"><span class="el-cursor"></span></p>
         </div>`;
 
-      const SB_URL = 'YOUR_SUPABASE_URL';
-      const AZURE_ENDPOINT = 'YOUR_AZURE_OPENAI_ENDPOINT';
 
       try {
         const res = await fetch('https://api.anthropic.com/v1/messages', {
