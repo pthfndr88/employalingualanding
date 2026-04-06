@@ -8,8 +8,7 @@
 import { serve } from 'https://deno.land/std@0.168.0/http/server.ts';
 
 // ─── CONFIG ──────────────────────────────────────────────────────────────────
-// Update FROM_EMAIL once employalingua.com is verified in Resend
-const FROM_EMAIL  = 'onboarding@resend.dev';      // → 'support@employalingua.com' after DNS
+const FROM_EMAIL  = 'support@employalingua.com';
 const FROM_NAME   = 'EmployaLingua®';
 const REPLY_TO    = 'support@employalingua.com';
 const RESEND_URL  = 'https://api.resend.com/emails';
